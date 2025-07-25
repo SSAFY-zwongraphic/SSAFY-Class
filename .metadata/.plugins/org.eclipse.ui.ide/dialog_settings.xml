@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\ssafy14\algorithm\SSAFY_Algorithm"/>
+		<item value="C:\ssafy14\class\SSAFY-Class\Practice"/>
+		<item value="C:\ssafy14\algorithm\SSAFY_Algorithm\algorithm"/>
+		<item value="C:\ssafy14\class\SSAFY-Class\Practice\src"/>
+	</list>
+</section>
