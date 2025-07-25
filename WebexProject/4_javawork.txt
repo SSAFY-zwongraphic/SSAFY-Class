@@ -1,0 +1,184 @@
+2_WebexProject  -- Java Project
+    src
+      w0121_object
+        ObjectEx1.java
+	    ObjectEx2.java / User.java       -- main(X)
+	    ObjectEx3.java
+	    ConstructorEx1.java
+	    ConstructorEx2.java
+	    ConstructorEx3.java
+	    ConstructorEx4.java / Student.java -- main(X)
+	    ConstructorEx5.java
+	  w0122_inher
+		InheritanceEx1.java
+        InheritanceEx2.java
+        InheritanceEx3.java
+        Emp.java  / EmpScore.java  / EmpMain.java  --main
+        StaticEx1.java     <--- static의 이해
+		StaticEx2.java   / BankAccount.java
+        ObjectEx.java      <---자바에서 생략가능한 것들
+      	OverloadEx.java
+      	OverrideEx.java
+	  w0122_animal
+     	Animal.java
+     	Dog.java
+     	Cat.java
+     	Duck.java
+     	Fish.java
+     	AnimalMain1.java  --main
+     	AnimalMain2.java  --main 
+      w0123_shape
+        Shape.java
+        Rectangle.java
+        Triangle.java
+        ShapeMain.java --main  
+      w0123_arrayobject
+        User.java
+        UserMain1.java --main
+        UserMain2.java --main  
+        UserMain3.java --main 
+      ax1
+      	AccessEx1.java
+      	AccessEx2.java
+      ax2
+        AccessEx3.java
+        AccessEx4.java
+      w0123_singleton
+        Main1.java  / Speaker1.java         <--일반객체(싱글톤패턴1.png 참조)
+        Main2.java  / Speaker2.java         <--싱글톤패턴(싱글톤패턴2.png 참조)  
+        Main3.java  / Speaker3.java         <--싱글톤패턴(싱글톤패턴2.png 참조)  
+      w0123_abstract
+     	AbstractEx1.java
+        AbstractEx2.java
+      w0123_interfaceex 
+	 	InterfaceEx1.java
+        InterfaceEx2.java
+        InterfaceEx3.java    
+      w0123_family
+        Family.java
+        Job.java  -- interface
+        Father.java
+        Mother.java
+        Son.java
+        MainEx.java  --main  (복사)
+        family.png	         (복사)
+      w0131_tv1
+        LgTv.java
+        SamsungTv.java
+        TvMain.java  --main
+      w0131_tv2
+     	Tv.java         --interface(메서드: powerOn/powerOff/soundUp/soundDown)
+        LgTv.java       --Tv.java 상속
+        SamsungTv.java  --Tv.java 상속
+        TvMain.java     --main  
+      w0131_instanceofex
+        InstanceofEx1.java
+        InstanceofEx2.java 
+      w0131_string  
+        StringBufferEx.java
+        StringEx.java
+        StringTokenizerEx.java
+        CalendarEx.java
+        RandomEx.java
+      w0131_collection  
+        SetEx.java
+        ListEx1.java
+        ListEx2.java
+        ListEx3.java  / Book.java
+        ListError.java
+        LottoNumber.java
+        MapEx1.java
+        MapEx2.java  / Book.java
+      w0131_emp   
+        EmpVo.java
+        EmpDao.java
+        EmpMain.java
+      w0131_test
+        Book.java
+        BookProc.java
+        User.java
+        UserProc.java
+        UserMain.java
+      w0203_lambda
+      	LambdaEx1.java  / Print.java
+        LambdaEx2.java  
+        LambdaEx3.java
+        LambdaEx4.java
+        LambdaEx5.java
+        LambdaEx6.java
+        LambdaEx7.java
+        LambdaEx8.java
+     w0203_stream
+        StreamEx1.java
+        StreamEx2.java  
+		StreamEx3.java 
+     w0203_compare1
+        StudentMain.java
+     w0203_compare2   
+        StudentMain.java
+     w0204_exception
+        ExceptionEx1.java
+        ExceptionEx2.java
+        ExceptionEx3.java
+        ExceptionEx4.java
+     w0205_io
+        InputStreamEx.java
+        OutputStreamEx.java
+     w0205_file
+        FileOutputStreamEx1.java / FileInputStreamEx1.java    
+        FileOutputStreamEx2.java / FileInputStreamEx2.java
+        FileWriterEx.java / FileReaderEx.java   <-- storage 폴더에 저장
+        CopyFile.java	           
+     w0205_object (객체직렬화)   
+        ObjectInputMain.java
+        ObjectOutputMain.java
+        User.java 	     
+     w0206_awt
+        AwtEx1.java
+        AwtEx2.java
+        AwtEx3.java
+        AwtEx4.java
+     w0206_gson
+        GSONTest.java / Todo.java
+     w0206_weather
+        Weather.java
+        WeatherDAO.java
+        WeatherMain1.java
+        WeatherMain2.java
+        WeatherMain3.java
+     w0206_weathericon
+        img  <---이미지 폴더
+        WeatherDomParser.java
+        WeatherDto.java
+        WeatherSaxParser.java
+        WeatherMain.java
+          
+==============================================================================
+[정렬]
+Comparable - 기본 정렬기준을 구현하는데 사용.
+Comparator - 기본 정렬기준 외에 다른 기준으로 정렬하고자할 때 사용. 
+
+[문법]
+public static Comparator<Type> myComparator = new Comparator<Type>() {
+    public int compare(Type o1, Type o2) {
+      //ascending order
+      return o1 - o2;
+    }
+};
+           
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     	
+     		
+		
