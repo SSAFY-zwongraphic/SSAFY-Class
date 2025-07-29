@@ -1,22 +1,30 @@
 package com.ssafy.day04.c_polymorphism;
 
 public class InstanceOfTest {
-    private void unsafeCasting() {
-        Object obj = 1;
-        String s = (String) obj;
-        System.out.println(s.length());
-    }
+	private void unsafeCasting() {
+		Object obj = 1;
+		String s = (String) obj;
+		System.out.println(s.length());
+	}
 
-    private void safeCasting() {
-        // TODO: 위 메서드가 안전하게 형 변환할 수 있도록 수정해보자.
+	private void safeCasting() {
+		// TODO: 위 메서드가 안전하게 형 변환할 수 있도록 수정해보자.
+		Object obj = 1;
+		if (obj instanceof String) {
+			String s = (String) obj;
+			System.out.println(s.length());
+		}
+		if (obj instanceof Integer) {
+			Integer i = (Integer) obj;
+			System.out.println(i);
+		}
+		// END
+	}
 
-        // END
-    }
-
-    public static void main(String[] args) {
-        InstanceOfTest instance = new InstanceOfTest();
-        instance.unsafeCasting();
-        instance.safeCasting();
-    }
+	public static void main(String[] args) {
+		InstanceOfTest instance = new InstanceOfTest();
+//        instance.unsafeCasting();
+		instance.safeCasting();
+	}
 
 }

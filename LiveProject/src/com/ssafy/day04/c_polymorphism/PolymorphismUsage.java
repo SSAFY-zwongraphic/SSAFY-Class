@@ -4,22 +4,29 @@ import com.ssafy.day03.a_inheritance.person.Person;
 import com.ssafy.day03.a_inheritance.person.SpiderMan;
 
 public class PolymorphismUsage {
-    public void useObjectArray() {
-        // TODO:Object []을 선언하고 다양한 객체를 저장하고 저장된 클래스 타입을 출력하세요.
+	public void useObjectArray() {
+		// TODO:Object []을 선언하고 다양한 객체를 저장하고 저장된 클래스 타입을 출력하세요.
+		Object[] obj = new Object[4];
+		obj[0] = 1;
+		obj[1] = "Hello";
+		obj[2] = new Person();
+		obj[3] = new SpiderMan();
+		for (Object o : obj) {
+			System.out.println(o);
+		}
+		// END
+	}
 
-        // END
-    }
+	public void useObjectParam() {
+		System.out.println(1);
+		System.out.println("Hello");
+		System.out.println(new Person());
+		System.out.println(new SpiderMan());
+	}
 
-    public void useObjectParam() {
-        System.out.println(1);
-        System.out.println("Hello");
-        System.out.println(new Person());
-        System.out.println(new SpiderMan());
-    }
-
-    public static void main(String[] args) {
-        PolymorphismUsage usage = new PolymorphismUsage();
-        usage.useObjectArray();
-        usage.useObjectParam();
-    }
+	public static void main(String[] args) {
+		PolymorphismUsage usage = new PolymorphismUsage();
+		usage.useObjectArray();
+		usage.useObjectParam();
+	}
 }

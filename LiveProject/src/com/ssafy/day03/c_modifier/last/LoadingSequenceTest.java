@@ -4,7 +4,7 @@ public class LoadingSequenceTest {
 
     private static LoadingSequenceTest lst = new LoadingSequenceTest();
     // TODO: array의 length가 10이 될 수 있도록 코드를 개선해보자.
-     private static int SIZE = 10;
+    private static int SIZE = 10;
 
     // END
     private int[] array;
