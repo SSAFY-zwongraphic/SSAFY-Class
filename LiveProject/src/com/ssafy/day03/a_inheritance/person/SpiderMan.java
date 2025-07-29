@@ -4,13 +4,17 @@ public class SpiderMan extends Person {
 	Spider spider = new Spider();
 	boolean isSpider;
 
+	public SpiderMan() {
+		isSpider = true;
+	}
+	
 	public SpiderMan(String name, boolean isSpider) {
 		super(name);
 		this.isSpider = isSpider;
 	}
 	
 	@Override
-	void jump() {
+	public void jump() {
 		if (isSpider) {
 			spider.jump();
 		} else {
