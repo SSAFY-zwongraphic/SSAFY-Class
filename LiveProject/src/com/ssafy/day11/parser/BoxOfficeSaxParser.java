@@ -16,28 +16,52 @@ import org.xml.sax.helpers.DefaultHandler;
 import com.ssafy.day11.dto.BoxOffice;
 
 public class BoxOfficeSaxParser extends DefaultHandler implements BoxOfficeParser {
-    // TODO: singleton 형태로 작성해보자.
+	// TODO: singleton 형태로 작성해보자.
 
-    // END
+	public static BoxOfficeSaxParser parser = new BoxOfficeSaxParser();
 
-    // 파싱된 내용을 저장할 List
-    private List<BoxOffice> list;
-    // 지금 처리할 객체의 내용
-    int rank;
-    String movieNm;
-    String openDt;
-    int audiAcc;
+	public static BoxOfficeSaxParser getParser() {
+		return parser;
+	}
 
-    // 방금 읽은 텍스트 내용
-    private String content;
+	private BoxOfficeSaxParser() {
+	}
+	// END
 
-    @Override
-    // TODO: getBoxOffice를 재정의하여 SAXParser를 구성하고 boxoffice.xml을 파싱하시오.
-         public List<BoxOffice> getBoxOffice(InputStream resource) { return null;}
+	// 파싱된 내용을 저장할 List
+	private List<BoxOffice> list;
+	// 지금 처리할 객체의 내용
+	int rank;
+	String movieNm;
+	String openDt;
+	int audiAcc;
 
-    // END
+	// 방금 읽은 텍스트 내용
+	private String content;
 
-    // TODO: 필요한 매서드를 재정의 하여 boxOffice.xml을 파싱하시오.
+	@Override
+	// TODO: getBoxOffice를 재정의하여 SAXParser를 구성하고 boxoffice.xml을 파싱하시오.
+	public List<BoxOffice> getBoxOffice(InputStream resource) throws ParserConfigurationException, SAXException, IOException {
+		list = new ArrayList<>();
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		SAXParser parser = factory.newSAXParser();
+		parser.parse(resource, this);
+		return list;
+	}
 
-    // END
+	// END
+
+	// TODO: 필요한 매서드를 재정의 하여 boxOffice.xml을 파싱하시오.
+	@Override
+	public void startDocument() throws SAXException {
+		System.out.println("문서 파싱 시작");
+		super.startDocument();
+	}
+	
+	@Override
+	public void endDocument() throws SAXException {
+		System.out.println("문서 파싱 완료");
+		super.endDocument();
+	}
+	// END
 }

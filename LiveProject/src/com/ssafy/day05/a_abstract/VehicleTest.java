@@ -2,10 +2,14 @@ package com.ssafy.day05.a_abstract;
 
 public class VehicleTest {
 
-  public static void main(String[] args) {
-    // TODO: DieselSUV와 ElectricCar를 각각 한대씩 관리하는배열을 만들고 사용해보자.
-
-    // END
-  }
+	public static void main(String[] args) {
+		// TODO: DieselSUV와 ElectricCar를 각각 한대씩 관리하는배열을 만들고 사용해보자.
+		Vehicle[] vehicle = { new DieselSUV(), new ElectricCar() };
+		for (Vehicle v : vehicle) {
+			v.addFuel();
+			v.reportPosition();
+		}
+		// END
+	}
 
 }
