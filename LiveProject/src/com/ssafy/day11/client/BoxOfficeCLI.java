@@ -21,8 +21,26 @@ public class BoxOfficeCLI {
     public List<BoxOffice> readBoxOfficeList(Type type) throws Exception {
         String file = null;
         // TODO: resource와 parser를 구성해서 정보를 가져와보자.
-
+        switch (type) {
+        case SAX: {
+        	file = "../res/boxoffice.xml";
+        	parser = BoxOfficeSaxParser.getParser();
+        	break;
+        }	
+        case DOM: {
+        	file = "../res/boxoffice.xml";
+        	parser = BoxOfficeDomParser.getParser();
+        	break;
+        }
+        case JSON: {
+        	file = "../res/boxoffice.xml";
+        	parser = BoxOfficeJsonParser.getParser();
+        	break;
+        }
+        }
         // END
+        resource = BoxOfficeCLI.class.getResourceAsStream(file);
+        //아쒸 다못썼네
 
     }
 
